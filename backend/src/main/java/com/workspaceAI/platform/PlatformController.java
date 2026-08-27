@@ -15,9 +15,9 @@ public class PlatformController {
     @GetMapping("/api/platform/info")
     public PlatformInfoResponse getPlatformInfo() {
         PlatformInfoResponse response = new PlatformInfoResponse();
-        response.setName(workspaceProperties.getName());
-        response.setVersion(workspaceProperties.getVersion());
-        response.setEnvironment(workspaceProperties.getEnvironment());
+        response.setName(workspaceProperties.name());
+        response.setVersion(workspaceProperties.version());
+        response.setEnvironment(workspaceProperties.environment());
         return response;
     }
 }
