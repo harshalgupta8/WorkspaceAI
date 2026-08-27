@@ -5,7 +5,6 @@ public class PlatformInfoResponse {
     private String version;
     private String environment;
     private String javaVersion;
-    private String uptime;
     private long timestamp;
 
     // Getters and setters
@@ -39,14 +38,6 @@ public class PlatformInfoResponse {
 
     public void setJavaVersion(String javaVersion) {
         this.javaVersion = javaVersion;
-    }
-
-    public String getUptime() {
-        return uptime;
-    }
-
-    public void setUptime(String uptime) {
-        this.uptime = uptime;
     }
 
     public long getTimestamp() {
