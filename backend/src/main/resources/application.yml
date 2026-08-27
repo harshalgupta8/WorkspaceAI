@@ -1,0 +1,5 @@
+workspace:
+  platform:
+    name: WorkspaceAI Platform
+    version: 0.1.0
+    environment: local

@@ -1,15 +1,18 @@
-package com.workspaceai.platform;
+package com.workspaceai.config;
 
-public class PlatformInfoResponse {
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties(prefix = "workspace.platform")
+public class WorkspaceProperties {
+
     private String name;
     private String version;
     private String environment;
 
-    // Getters and setters
+    // getters and setters
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -29,5 +32,4 @@ public class PlatformInfoResponse {
     public void setEnvironment(String environment) {
         this.environment = environment;
     }
-
 }
