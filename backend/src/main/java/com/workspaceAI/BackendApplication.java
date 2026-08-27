@@ -1,4 +1,4 @@
-package com.workspaceAI;
+package com.workspaceai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
