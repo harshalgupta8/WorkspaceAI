@@ -1,33 +1,8 @@
 package com.workspaceai.platform;
 
-public class PlatformInfoResponse {
-    private String name;
-    private String version;
-    private String environment;
-
-    // Getters and setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public String getEnvironment() {
-        return environment;
-    }
-
-    public void setEnvironment(String environment) {
-        this.environment = environment;
-    }
-
+public record PlatformInfoResponse(
+    String name,
+    String version,
+    String environment
+) {
 }

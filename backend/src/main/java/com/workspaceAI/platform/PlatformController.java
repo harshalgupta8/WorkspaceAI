@@ -14,10 +14,10 @@ public class PlatformController {
 
     @GetMapping("/api/platform/info")
     public PlatformInfoResponse getPlatformInfo() {
-        PlatformInfoResponse response = new PlatformInfoResponse();
-        response.setName(workspaceProperties.name());
-        response.setVersion(workspaceProperties.version());
-        response.setEnvironment(workspaceProperties.environment());
-        return response;
+        return new PlatformInfoResponse(
+            workspaceProperties.name(),
+            workspaceProperties.version(),
+            workspaceProperties.environment()
+        );
     }
 }
