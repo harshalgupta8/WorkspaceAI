@@ -21,19 +21,11 @@ public class ChatService {
         this.chatClient = chatClientBuilder.build();
     }
 
-    public String chat(String message, String context) {
+    public String chat(String message) {
         return chatClient.prompt()
-                .system(systemInstructions(context))
+                .system(SYSTEM_INSTRUCTIONS)
                 .user(message)
                 .call()
                 .content();
-    }
-
-    private String systemInstructions(String context) {
-        if (context == null || context.isBlank()) {
-            return SYSTEM_INSTRUCTIONS;
-        }
-
-        return SYSTEM_INSTRUCTIONS + "\n\nRuntime context:\n" + context;
     }
 }
